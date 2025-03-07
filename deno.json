@@ -1,17 +1,20 @@
 {
   "tasks": {
-    "dev": "astro check --watch & astro dev --port 3000 --root /app",
-    "start": "deno run -A --watch main.ts",
-    "test": "deno test -A --doc --parallel --shuffle",
+    "dev": "astro check --watch & astro dev --host --port 3000 --root /app",
     "fmt": "deno fmt --unstable-component",
     "fmt:check": "deno fmt --unstable-component --check",
+    "init": "deno run npm:create-astro@latest",
+    "install": "deno install --allow-scripts",
     "lint": "deno lint",
     "lint:fix": "deno lint --fix",
+    "start": "deno run -A --watch main.ts",
+    "test": "deno test -A --doc --parallel --shuffle",
     "astro:add": "astro add --root /app",
     "astro:build": "astro build --root /app",
+    "astro:dev": "astro check --watch & astro dev --host --port 3000 --root /app",
+    "astro:preferences": "astro preferences --root /app",
     "astro:preview": "astro preview --root /app",
     "astro:sync": "astro sync --root /app",
-    "astro:preferences": "astro preferences --root /app",
     "astro:telemetry": "astro telemetry --root /app"
   },
   "imports": {
