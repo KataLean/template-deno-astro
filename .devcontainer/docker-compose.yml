@@ -1,0 +1,52 @@
+services:
+  app:
+    build:
+      args:
+        ARCH: 'arm64'
+        #DEBIAN_VERSION: 'trixie'
+        DEBIAN_VERSION: 'stable'
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+      ## Only will build development stage from our dockerfile
+      target: development
+    working_dir: /app
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    networks:
+      - backend
+    volumes:
+      - ..:/app
+    ## Run a command against the development stage of the image
+    command: sleep infinity
+    init: true
+
+  postgres:
+    image: postgres:17
+    env_file:
+      - .env
+    ports:
+      - 5432:5432
+    networks:
+      - backend
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    ports:
+      - 5050:80
+    networks:
+      - backend
+    depends_on:
+      - postgres
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  dbdata:

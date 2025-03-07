@@ -1,0 +1,39 @@
+{
+  // Editor settings
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  // Spell check settings, these can remain as is
+  "cSpell.words": [
+    "codespaces",
+    "devcontainer"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "^package\\s+\\w+$",
+    "/\\w+\"$"
+  ],
+  "cSpell.ignorePaths": [
+    ".vscode/**",
+    ".devcontainer/devcontainer.json"
+  ],
+  // Deno specific settings
+  "deno.enable": true,
+  "deno.lint": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+
+  // Node and Svelte specific settings (assuming you are using the Svelte extension)
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  // CSS lint settings
+  "css.lint.unknownAtRules": "ignore"
+}

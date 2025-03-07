@@ -1,0 +1,90 @@
+{
+  "name": "Deno/Astro",
+  // Run context is a service container in the docker-compose file.
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "app",
+  "runServices": [
+    "app"
+  ],
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  //"remoteUser": "deno",
+  // What additional features do we want to install in our container ?
+  // https://containers.dev/features
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
+      "upgradePackages": true,
+      "nonFreePackages": true
+      // "username": "",
+      // "userUid": "",
+      // "userGid": ""
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+  // Install deno dependancies and build everything on container creation.
+  //"postCreateCommand": "bash /usr/local/bin/config_init.sh && deno install --entrypoint main.ts && cd /app && deno task build",
+  "postCreateCommand": "bash /usr/local/bin/config_init.sh",
+  "waitFor": "postCreateCommand",
+  // "postAttachCommand": {
+  //   "Server": "dino task dev --host"
+  // },
+  //"postCreateCommand": "yarn install --frozen-lockfile",
+  // Use this environment variable if you need to bind mount your local source code into a new container.
+  //"remoteEnv": {
+  //	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  //},
+  // List of ports inside the container available locally.
+  "forwardPorts": [
+    3000,
+    5432,
+    5480
+  ],
+  // List of ports that should be exposed by the container.
+  "portsAttributes": {
+    "3000": {
+      "label": "Astro",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "src/pages/index.astro"
+      ]
+    },
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode-remote.remote-containers",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.codespaces",
+        "GitHub.copilot",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "rangav.vscode-thunder-client",
+        "Dagger.dagger",
+        "WallabyJs.console-ninja",
+        "dbaeumer.vscode-eslint",
+        //"esbenp.prettier-vscode",
+        "denoland.vscode-deno",
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "inlang.vs-code-extension",
+        "astro-build.astro-vscode"
+      ]
+    }
+  }
+}
