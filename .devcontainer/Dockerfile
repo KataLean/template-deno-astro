@@ -66,7 +66,10 @@ RUN deno install --entrypoint main.ts
 COPY . .
 
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
-RUN deno cache main.ts
+RUN deno cache main.ts && \
+  deno task install && \
+  deno add npm:@deno/astro-adapter && \
+  deno task astro:build
 
 ## We need to run the application in the background
 # CMD ["deno", "run", "-A", "main.ts"]

@@ -1,0 +1,49 @@
+    1  deno task dev
+    2  deno install --allow-scripts
+    3  deno task dev
+    4* git log -3 | cat
+    5* cat ~/.bashrc
+    6* cat ~/.bashrc | grep ame
+    7* git log -3 | cat
+    8* gc!
+    9* git log -3 | cat
+   10  astro add --root /app tailwind
+   11  deno task install
+   12  deno task
+   13  deno task dev
+   14  deno task astro:add deno
+   15  eno cache --reload main.ts
+   16  deno cache --reload main.ts
+   17  ll
+   18  deno install --entrypoint main.ts
+   19  ll
+   20  deno cache --reload main.ts
+   21  ll
+   22  deno add npm:@astrojs/check
+   23  deno task dev
+   24  deno add npm:typescript
+   25  deno task dev
+   26  deno task astro:add deno
+   27  deno add @astrojs/cli-kit
+   28  deno add npm:@astrojs/cli-kit
+   29  deno add npm:@bluwy/giget-core
+   30  deno add npm:create-astro
+   31  deno task astro:add deno
+   32  deno cache -A --reload main.ts
+   33  deno -A cache --reload main.ts
+   34  deno cache --allow-all --reload main.ts
+   35  deno cache --allow-all main.ts
+   36  deno cache main.ts
+   37  deno cache --reload main.ts
+   38  ll
+   39  deno run -A astro add deno
+   40  deno task -A astro add deno
+   41  deno task astro add deno
+   42  deno install --allow-scripts
+   43  deno task astro add deno
+   44  deno add @deno/astro-adapter
+   45  deno add jsr:@deno/astro-adapter
+   46  deno add npm:@deno/astro-adapter
+   47  deno task preview
+   48  deno task astro:build
+   49  deno task preview
