@@ -71,6 +71,13 @@ deno task preview
 - **Astro v5**: A modern static site builder.
 - **Deno v2**: A secure runtime for JavaScript and TypeScript.
 - **Tailwind CSS v4**: A utility-first CSS framework.
+- **PostgreSQL 17 (optional)**: SQL database
+  (`.devcontainer/docker-compose.yml`).
+- **pgAdmin 4 (optional)**: PostgreSQL UI (`.devcontainer/docker-compose.yml`).
+
+Note: The Svelte VS Code extension is also installed for convenience, but can be
+removed easily if not needed `.devcontainer/devcontainer.json` and
+`.vscode/settings.json`).
 
 ## Development
 

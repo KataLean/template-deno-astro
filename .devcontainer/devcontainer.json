@@ -35,9 +35,8 @@
   "postCreateCommand": "bash /usr/local/bin/config_init.sh",
   "waitFor": "postCreateCommand",
   // "postAttachCommand": {
-  //   "Server": "dino task dev --host"
+  //   "Server": "deno task dev"
   // },
-  //"postCreateCommand": "yarn install --frozen-lockfile",
   // Use this environment variable if you need to bind mount your local source code into a new container.
   //"remoteEnv": {
   //	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"

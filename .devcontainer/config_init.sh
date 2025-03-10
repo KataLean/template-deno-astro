@@ -9,6 +9,11 @@ if [ ! -f .devcontainer/.env ]; then
     cp .devcontainer/.env.dist .devcontainer/.env
 fi
 
+## We can add ZSH as our default shell if present
+if [ ! -z /bin/zsh ]; then
+    usermod -s /bin/zsh ${USER}
+fi
+
 ## Append content to .bashrc using a here-document
 cat << 'EOF' > ${HOME}/.bashrc
 
