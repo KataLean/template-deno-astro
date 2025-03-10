@@ -103,6 +103,14 @@ To preview the production build:
 deno task preview
 ```
 
+## Upgrade
+
+In order to upgrade the project to the latest versions of it's dependencies, run
+
+```bash
+deno task upgrade
+```
+
 ## License
 
 This project is licensed under the Apache 2.0 license.

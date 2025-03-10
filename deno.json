@@ -1,5 +1,14 @@
 {
   "tasks": {
+    "astro": "astro",
+    "astro:add": "astro add --root /app",
+    "astro:build": "astro build --root /app",
+    "astro:check": "astro check --watch --root /app",
+    "astro:dev": "astro check --watch & astro dev --host --port 3000 --root /app",
+    "astro:preferences": "astro preferences --root /app",
+    "astro:preview": "astro preview --root /app",
+    "astro:sync": "astro sync --root /app",
+    "astro:telemetry": "astro telemetry --root /app",
     "dev": "astro check --watch & astro dev --host --port 3000 --root /app",
     "fmt": "deno fmt --unstable-component",
     "fmt:check": "deno fmt --unstable-component --check",
@@ -10,15 +19,8 @@
     "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "start": "deno run -A --watch main.ts",
     "test": "deno test -A --doc --parallel --shuffle",
-    "astro": "astro",
-    "astro:add": "astro add --root /app",
-    "astro:build": "astro build --root /app",
-    "astro:check": "astro check --watch --root /app",
-    "astro:dev": "astro check --watch & astro dev --host --port 3000 --root /app",
-    "astro:preferences": "astro preferences --root /app",
-    "astro:preview": "astro preview --root /app",
-    "astro:sync": "astro sync --root /app",
-    "astro:telemetry": "astro telemetry --root /app"
+    "update": "deno outdated",
+    "upgrade": "deno outdated --update --interactive && deno cache main.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
