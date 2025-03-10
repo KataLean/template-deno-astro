@@ -9,6 +9,7 @@ export default defineConfig({
   adapter: deno(),
   vite: {
     plugins: [
+      // @ts-expect-error: Vite plugin type mismatch under Deno
       tailwindcss(),
     ],
   },
