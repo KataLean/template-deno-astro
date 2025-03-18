@@ -15,14 +15,14 @@
     "@deno/astro-adapter": "^0.3.0",
     "@deno/vite-plugin": "^1.0.4",
     "@img/sharp-wasm32": "^0.33.5",
-    "@tailwindcss/postcss": "^4.0.13",
-    "@tailwindcss/vite": "^4.0.13",
-    "astro": "^5.4.3",
+    "@tailwindcss/postcss": "^4.0.14",
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.5.2",
     "autoprefixer": "^10.4.21",
     "create-astro": "^4.11.1",
     "postcss": "^8.5.3",
     "sharp": "^0.33.5",
-    "tailwindcss": "^4.0.13",
+    "tailwindcss": "^4.0.14",
     "typescript": "^5.8.2"
   }
 }
