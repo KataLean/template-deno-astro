@@ -29,11 +29,13 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
 
-  // Node and Svelte specific settings (assuming you are using the Svelte extension)
+  // Svelte specific settings (assuming you are using the Svelte extension)
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   // CSS lint settings
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  // Ninja settings
+  "console-ninja.showWhatsNew": false
 }
