@@ -1,7 +1,6 @@
 ARG ARCH="arm64"
 ARG DEBIAN_VERSION="stable"
-#ARG DEBIAN_VERSION="trixie"
-#ARG DENO_VERSION="2.2.3"
+#ARG DENO_VERSION="2.2.8"
 
 ##
 # DEVELOPMENT
@@ -19,7 +18,7 @@ ARG DEBIAN_PACKAGES="curl unzip ca-certificates vim tree" \
 WORKDIR ${DIRECTORY}
 
 ## Tell Docker what port we are going to listen on
-EXPOSE 3000
+EXPOSE 3001
 
 ## Install Debian packages
 ENV DEBIAN_FRONTEND="noninteractive" \
