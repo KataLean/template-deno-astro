@@ -13,7 +13,7 @@
     "fmt": "deno fmt --unstable-component",
     "fmt:check": "deno fmt --unstable-component --check",
     "init": "deno run npm:create-astro@latest",
-    "install": "deno install --allow-scripts",
+    "install": "deno install --allow-scripts && deno cache main.ts",
     "lint": "deno lint",
     "lint:fix": "deno lint --fix",
     "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",

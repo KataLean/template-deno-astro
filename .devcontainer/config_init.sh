@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## Make sure dependencies and types are installed
+deno task install
+
 ##
 ## Configure the local container environment
 ##
@@ -10,7 +13,7 @@ if [ ! -f .devcontainer/.env ]; then
 fi
 
 ## We can add ZSH as our default shell if present
-if [ ! -z /bin/zsh ]; then
+if [ -f /bin/zsh ]; then
     usermod -s /bin/zsh ${USER}
 fi
 
